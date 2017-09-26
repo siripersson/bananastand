@@ -17,18 +17,18 @@ greet()
 
 // Objekt
 bananasplit_obj= {
-	name_b: "banan",
-	price_b: 15
+	name: "banan",
+	price: 15
 }
 
 spoon_obj= {
-	name_s: "spoon",
-	price_s: 5
+	name: "spoon",
+	price: 5
 }
 
 sallad_obj= {
-	name_s: "sallad",
-	price_s: 60
+	name: "sallad",
+	price: 60
 }
 
 // Lägg in vad som finns på menyn
@@ -38,17 +38,21 @@ menu[2]=sallad_obj
 
 // Funktioner som printar
 const describeBananasplit =() => {
-	console.log(bananasplit_obj.name_b + " with price: " + bananasplit_obj.price_b +'sek')
+	console.log(bananasplit_obj.name + " with price: " + bananasplit_obj.price +'sek')
 }
 
 const describeSpoon =() => {
-	console.log(spoon_obj.name_s + " with price: " + spoon_obj.price_s + 'sek')
+	console.log(spoon_obj.name + " with price: " + spoon_obj.price + 'sek')
+}
+
+const describeItem =(item) => {
+	console.log(item.name+ " with price: " + item.price + 'sek')
 }
 
 const describeMenu =() => {
 	console.log("On the menu: ")
 	for(i=0; i<menu.length; i++){
-		console.log(menu[i])
+		console.log(describeItem(menu[i]))
 	}
 }
 
